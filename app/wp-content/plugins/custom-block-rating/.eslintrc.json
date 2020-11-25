@@ -45,7 +45,6 @@
 		"eol-last": "error",
 		"eqeqeq": "error",
 		"func-call-spacing": "error",
-		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"jsx-a11y/label-has-for": [
 			"error",
 			{
@@ -150,21 +149,11 @@
 		"no-useless-return": "error",
 		"no-var": "error",
 		"no-whitespace-before-property": "error",
-		"object-curly-spacing": ["error", "always"],
 		"padded-blocks": ["error", "never"],
 		"prefer-const": "error",
 		"quote-props": ["error", "as-needed"],
 		"react/display-name": "off",
-		"react/jsx-curly-spacing": [
-			"error",
-			{
-				"when": "always",
-				"children": true
-			}
-		],
 		"react/jsx-equals-spacing": "error",
-		"react/jsx-indent": ["error", "tab"],
-		"react/jsx-indent-props": ["error", "tab"],
 		"react/jsx-key": "error",
 		"react/jsx-tag-spacing": "error",
 		"react/no-children-prop": "off",
@@ -172,18 +161,6 @@
 		"react/prop-types": "off",
 		"semi": "error",
 		"semi-spacing": "error",
-		"space-before-blocks": ["error", "always"],
-		"space-before-function-paren": ["error", "never"],
-		"space-in-parens": ["error", "always"],
-		"space-infix-ops": ["error", { "int32Hint": false }],
-		"space-unary-ops": [
-			"error",
-			{
-				"overrides": {
-					"!": true
-				}
-			}
-		],
 		"template-curly-spacing": ["error", "always"],
 		"valid-jsdoc": ["error", { "requireReturn": false }],
 		"valid-typeof": "error",
