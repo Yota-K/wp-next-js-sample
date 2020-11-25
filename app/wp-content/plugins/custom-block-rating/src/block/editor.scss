@@ -4,12 +4,18 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-
-.wp-block-cgb-block-custom-block-rating  {
-  background: $green;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+.wp-block-cgb-block-my-block {
+  &.rating-content {
+    border: 4px solid #73bbe8;
+    background: #fff;
+    padding: 20px 25px;
+    h2 {
+      font-size: 24px;
+      margin: 12px 0 20px;
+    }
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
 }

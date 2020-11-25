@@ -4,11 +4,62 @@
  * CSS for both Frontend+Backend.
  */
 
-.wp-block-cgb-block-custom-block-rating  {
-  background: $red;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+.wp-block-cgb-block-custom-block-rating {
+  &.rating-content {
+    border: 4px solid #73bbe8;
+    background: #fff;
+    padding: 20px 25px;
+
+    // 見出し
+    h2 {
+      font-size: 24px;
+      margin: 12px 0 20px;
+    }
+
+    // 評価
+    .star {
+      color: #dcd7ca;
+    }
+    .rating-1 {
+      span {
+        &:nth-child(1) {
+          color: #ffe069;
+        }
+      }
+    }
+    .rating-2 {
+      span {
+        &:nth-child(-n+2) {
+          color: #ffe069;
+        }
+      }
+    }
+    .rating-3 {
+      span {
+        &:nth-child(-n+3) {
+          color: #ffe069;
+        }
+      }
+    }
+    .rating-4 {
+      span {
+        &:nth-child(-n+4) {
+          color: #ffe069;
+        }
+      }
+    }
+    .rating-5 {
+      span {
+        &:nth-child(-n+5) {
+          color: #ffe069;
+        }
+      }
+    }
+
+    // 本文
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
 }
