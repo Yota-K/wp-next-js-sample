@@ -51,7 +51,7 @@ registerBlockType( 'cgb/block-custom-block-rating', {
           onChange={newText => setAttributes({ ratingTitle: newText })}
           tagName="h2"
           placeholder="タイトルを入力してください"
-          keepPlaceholderOnFocus={true}
+          keepPlaceholderOnFocus={false}
         />
         <SelectControl
           options={options}
@@ -63,7 +63,7 @@ registerBlockType( 'cgb/block-custom-block-rating', {
           onChange={newText => setAttributes({ ratingText: newText })}
           tagName="p"
           placeholder="本文を入力してください"
-          keepPlaceholderOnFocus={true}
+          keepPlaceholderOnFocus={false}
         />
       </div>
     );
