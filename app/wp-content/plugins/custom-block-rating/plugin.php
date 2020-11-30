@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: custom-block-rating — CGB Gutenberg Block Plugin
+ * Plugin Name: 口コミが表示できるブロック
  * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: custom-block-rating — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
+ * Description: 口コミが表示できるカスタムブロックを使用できるプラグインです。
+ * Author: Yota-K
+ * Author URI: https://karukichi-blog.netlify.app/
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
