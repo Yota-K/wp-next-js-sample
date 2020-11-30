@@ -5,8 +5,10 @@
  */
 
 .wp-block-cgb-block-custom-block-rating {
+  font-family: sans-serif;
+
   &.rating-content {
-    border: 4px solid #73bbe8;
+    border: 4px solid $blue;
     background: #fff;
     padding: 20px 25px;
 
@@ -16,6 +18,11 @@
       margin: 12px 0 20px;
     }
 
+    // 人物像
+    .human {
+      font-size: 16px;
+    }
+
     // 評価
     .star {
       color: #dcd7ca;
@@ -23,35 +30,35 @@
     .rating-1 {
       span {
         &:nth-child(1) {
-          color: #ffe069;
+          color: $star-yellow;
         }
       }
     }
     .rating-2 {
       span {
         &:nth-child(-n+2) {
-          color: #ffe069;
+          color: $star-yellow;
         }
       }
     }
     .rating-3 {
       span {
         &:nth-child(-n+3) {
-          color: #ffe069;
+          color: $star-yellow;
         }
       }
     }
     .rating-4 {
       span {
         &:nth-child(-n+4) {
-          color: #ffe069;
+          color: $star-yellow;
         }
       }
     }
     .rating-5 {
       span {
         &:nth-child(-n+5) {
-          color: #ffe069;
+          color: $star-yellow;
         }
       }
     }
