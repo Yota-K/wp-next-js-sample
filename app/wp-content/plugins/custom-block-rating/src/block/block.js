@@ -1,6 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { TextControl, SelectControl } from '@wordpress/components';
 import { RichText } from '@wordpress/block-editor';
-import { SelectControl } from '@wordpress/components';
 
 //  Import CSS.
 import './editor.scss';
@@ -24,6 +24,10 @@ registerBlockType( 'cgb/block-custom-block-rating', {
       type: 'string',
       default: '',
     },
+    humanText: {
+      type: 'string',
+      default: '',
+    },
     ratingSelect: {
       type: 'string',
       default: '',
@@ -34,7 +38,7 @@ registerBlockType( 'cgb/block-custom-block-rating', {
     },
   },
 
-  edit: ({ attributes: { ratingTitle, ratingSelect, ratingText }, setAttributes }) => {
+  edit: ({ attributes: { ratingTitle, humanText, ratingSelect, ratingText }, setAttributes }) => {
     const options = [
       { value: '-', label: '評価を選択してください' },
       { value: 1, label: '★' },
@@ -53,6 +57,13 @@ registerBlockType( 'cgb/block-custom-block-rating', {
           placeholder="タイトルを入力してください"
           keepPlaceholderOnFocus={false}
         />
+        <TextControl
+          value={humanText}
+          onChange={newText => setAttributes({ humanText: newText })}
+          tagName="span"
+          placeholder="人物像を入力してください"
+          keepPlaceholderOnFocus={false}
+        />
         <SelectControl
           options={options}
           value={ratingSelect}
@@ -69,10 +80,11 @@ registerBlockType( 'cgb/block-custom-block-rating', {
     );
   },
 
-  save: ({ attributes: { ratingTitle, ratingSelect, ratingText } }) => {
+  save: ({ attributes: { ratingTitle, humanText, ratingSelect, ratingText } }) => {
     return (
       <div className="rating-content">
         <RichText.Content value={ratingTitle} tagName="h2" />
+        <span className="human">{humanText}</span>
         <div className={`rating-${ ratingSelect }`}>
           <span className="star">★</span>
           <span className="star">★</span>
