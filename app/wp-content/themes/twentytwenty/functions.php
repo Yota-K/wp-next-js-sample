@@ -754,3 +754,30 @@ function twentytwenty_get_elements_array() {
 	*/
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+
+// 投稿一覧のカラムに見出しを追加
+function add_page_columns($columns) {
+  $columns['acf_data'] = 'カスタムフィールドのデータ';
+
+  // コメントは不要なので非表示
+  unset($columns['comments']);
+
+  return $columns;
+}
+add_filter('manage_posts_columns', 'add_page_columns');
+
+// テストというカテゴリーがついた投稿の場合
+// カスタムフィールドが設定されていたら、カスタムフィールドの値を表示
+function admin_view_show_custom_field_text($column_name, $post_id) {
+  if ($column_name === 'acf_data') {
+    $category_name = get_the_category()[0]->name;
+
+    // カテゴリーがテストの時のみ処理を実行
+    if ($category_name === 'テスト') {
+      $acf_data = get_field('text', $post_id);
+      // echoは式では使えないのでprintを使う
+      $acf_data ? print($acf_data) : print('値が設定されていません');
+    }
+  }
+}
+add_filter('manage_posts_custom_column', 'admin_view_show_custom_field_text', 10, 2);
