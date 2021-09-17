@@ -1,2 +1,3 @@
 .env
 app/wp-config.php
+my-app/node_modules
